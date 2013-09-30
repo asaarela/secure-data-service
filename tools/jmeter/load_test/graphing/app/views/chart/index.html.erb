@@ -1,0 +1,5 @@
+<table>
+<% @jmeter_suite_runs.each do |jmeter_suite_run| %>
+    <tr><td><%= link_to "#{jmeter_suite_run[:filename]}", :controller => "chart", :action => "show", :id => jmeter_suite_run[:filename] %></td></tr>
+<% end %>
+</table>

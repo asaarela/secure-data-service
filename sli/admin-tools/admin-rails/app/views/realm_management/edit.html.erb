@@ -1,0 +1,10 @@
+<div id="notice">
+	<%= notice %>
+</div>
+
+<h1>Realm Management For <%= @realm.name %> </h1>
+
+<%= form_for(@realm, :url => {:controller => 'realm_management', :action => 'update'}) do |f| %>
+  <%= render :partial => 'form', :locals => {:f => f} %>
+<% end %>
+ 

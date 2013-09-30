@@ -1,0 +1,50 @@
+{
+    "recordType":"grade",
+    "attributes":
+    {
+        "StudentSectionAssociationReference":
+        {
+            "StudentSectionAssociationIdentity":
+            {
+                "BeginDate":{"_value":"2011-09-01"},
+                "SectionReference":
+                {
+                    "SectionIdentity":
+                    {
+                        "EducationalOrgReference":
+                        {
+                            "EducationalOrgIdentity":
+                            {
+                                "StateOrganizationId":{"_value":"this school"}
+                            }
+                        },
+                        "UniqueSectionCode":{"_value":"this section"}
+                    }
+                },
+                "StudentReference":
+                {
+                    "StudentIdentity":
+                    {
+                        "StudentUniqueStateId":{"_value":"800000025"}
+                    }
+                }
+            }
+        },
+        "GradingPeriodReference":
+        {
+            "GradingPeriodIdentity":
+            {
+                "EducationalOrgReference":
+                {
+                    "EducationalOrgIdentity":
+                    {
+                        "StateOrganizationId":{"_value":"this school"}
+                    }
+                },
+                "GradingPeriod":{"_value":"First Six Weeks"},
+                "BeginDate":{"_value":"2011-09-01"}
+            }
+        }
+    }
+}
+

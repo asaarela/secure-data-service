@@ -1,0 +1,129 @@
+{{! 
+Copyright 2012-2013 inBloom, Inc. and its affiliates.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+}}
+{{#entity}}
+  <StudentAcademicRecord>
+    {{#cumulativeCreditsEarned}}
+    <CumulativeCreditsEarned>
+      <Credit>{{cumulativeCreditsEarned}}</Credit>
+    </CumulativeCreditsEarned>
+    {{/cumulativeCreditsEarned}}
+    {{#cumulativeCreditsAttempted}}
+    <CumulativeCreditsAttempted>
+      <Credit>{{cumulativeCreditsAttempted}}</Credit>
+    </CumulativeCreditsAttempted>
+    {{/cumulativeCreditsAttempted}}
+    {{#cumulative_credits}}
+    <CumulativeCreditsAttempted>
+      <Credit>{{cumulative_credits}}</Credit>
+    </CumulativeCreditsAttempted>
+    {{/cumulative_credits}}
+    {{#cumulativeGradePointsEarned}}
+    <CumulativeGradePointsEarned>{{cumulativeGradePointsEarned}}</CumulativeGradePointsEarned>
+    {{/cumulativeGradePointsEarned}}
+    {{#cumulative_gpa}}
+    <CumulativeGradePointAverage>{{cumulative_gpa}}</CumulativeGradePointAverage>
+    {{/cumulative_gpa}}
+    {{#gradeValueQualifier}}
+    <GradeValueQualifier>{{gradeValueQualifier}}</GradeValueQualifier>
+    {{/gradeValueQualifier}}
+    {{#classRanking}}
+    <ClassRanking>
+      <ClassRank>{{classRank}}</ClassRank>
+      <TotalNumberInClass>{{totalNumberInClass}}</TotalNumberInClass>
+      <PercentageRanking>{{percentageRanking}}</PercentageRanking>
+      <ClassRankingDate>{{classRankingDate}}</ClassRankingDate>
+    </ClassRanking>
+    {{/classRanking}}
+    {{#academicHonors}}
+    <AcademicHonors>
+      <AcademicHonorsType>{{academicHonorsType}}</AcademicHonorsType>
+      <HonorsDescription>{{honorsDescription}}</HonorsDescription>
+      <HonorAwardDate>{{honorAwardDate}}</HonorAwardDate>
+    </AcademicHonors>
+    {{/academicHonors}}
+    {{#recognitions}}
+    <Recognitions>
+      <RecognitionType>{{recognitionType}}</RecognitionType>
+      <RecognitionDescription>{{recognitionDescription}}</RecognitionDescription>
+      <RecognitionAwardDate>{{recognitionAwardDate}}</RecognitionAwardDate>
+    </Recognitions>
+    {{/recognitions}}
+    {{#projectedGraduationDate}}
+    <ProjectedGraduationDate>{{projectedGraduationDate}}</ProjectedGraduationDate>
+    {{/projectedGraduationDate}}
+    {{#sessionCreditsEarned}}
+      <SessionCreditsEarned>
+        <Credit>{{sessionCreditsEarned}}</Credit>
+      </SessionCreditsEarned>
+    {{/sessionCreditsEarned}}
+    {{#sessionCreditsAttempted}}
+      <SessionCreditsAttempted>
+        <Credit>{{sessionCreditsAttempted}}</Credit>
+      </SessionCreditsAttempted>
+    {{/sessionCreditsAttempted}}
+    {{#sessionGradePointsEarned}}
+    <SessionGradePointsEarned>{{sessionGradePointsEarned}}</SessionGradePointsEarned>
+    {{/sessionGradePointsEarned}}
+    {{#session_gpa}}
+    <SessionGradePointAverage>{{session_gpa}}</SessionGradePointAverage>
+    {{/session_gpa}}
+    <StudentReference>
+      <StudentIdentity>
+        <StudentUniqueStateId>{{student_id}}</StudentUniqueStateId>
+      </StudentIdentity>
+    </StudentReference>
+    <SessionReference>
+      <SessionIdentity>
+        <EducationalOrgReference>
+          <EducationalOrgIdentity>
+            <StateOrganizationId>{{ed_org_id}}</StateOrganizationId>
+          </EducationalOrgIdentity>
+        </EducationalOrgReference>
+        <SessionName>{{session_name}}</SessionName>
+      </SessionIdentity>
+    </SessionReference>
+    {{#report_card}}
+    <ReportCardReference>
+      <ReportCardIdentity>
+        <StudentReference>
+          <StudentIdentity>
+            <StudentUniqueStateId>{{student}}</StudentUniqueStateId>
+          </StudentIdentity>
+        </StudentReference>
+        {{#grading_period}}
+        <GradingPeriodReference>
+          <GradingPeriodIdentity>
+            <EducationalOrgReference>
+              <EducationalOrgIdentity>
+                <StateOrganizationId>{{ed_org_id}}</StateOrganizationId>
+              </EducationalOrgIdentity>
+            </EducationalOrgReference>
+            <GradingPeriod>{{type}}</GradingPeriod>
+            <BeginDate>{{begin_date}}</BeginDate>
+          </GradingPeriodIdentity>
+        </GradingPeriodReference>
+        {{/grading_period}}
+        {{#school_year}}
+        <SchoolYear>{{school_year}}</SchoolYear>
+        {{/school_year}}
+      </ReportCardIdentity>
+    </ReportCardReference>
+    {{/report_card}}
+    {{#school_year}}
+    <SchoolYear>{{school_year}}</SchoolYear>
+    {{/school_year}}
+  </StudentAcademicRecord>
+{{/entity}}

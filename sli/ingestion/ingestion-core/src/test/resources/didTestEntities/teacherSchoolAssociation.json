@@ -1,0 +1,20 @@
+{
+"recordType":"teacherSchoolAssociation",
+"attributes":
+{
+    "SchoolReference":
+    {
+        "EducationalOrgIdentity":
+        {
+            "StateOrganizationId":{"_value":"testSchoolId"}
+        }
+    },
+    "TeacherReference":
+    {
+        "StaffIdentity":
+        {
+            "StaffUniqueStateId":{"_value":"jjackson"}
+        }
+    }
+}
+}

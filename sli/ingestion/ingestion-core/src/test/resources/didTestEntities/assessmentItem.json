@@ -1,0 +1,24 @@
+{
+"recordType":"assessmentItem",
+"attributes":
+{
+    "AssessmentReference":
+    {
+        "AssessmentIdentity":
+        {
+            "AssessmentTitle":{"_value":"Fraction Homework 123"},
+            "GradeLevelAssessed":{"_value":"Fifth grade"},
+            "Version":{"_value":1}
+        }
+    },
+    "LearningStandardReference":
+                [
+                    {
+                        "LearningStandardIdentity":
+                        {
+                            "IdentificationCode": {"_value" : "0123456789"}
+                        }
+                    }
+                ]
+}
+}

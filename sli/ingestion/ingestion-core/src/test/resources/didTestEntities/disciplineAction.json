@@ -1,0 +1,50 @@
+{
+"recordType":"disciplineAction",
+"attributes":
+{
+    "StudentReference":
+    {
+        "StudentIdentity":
+        {
+            "StudentUniqueStateId":{"_value":"100000000"}
+        }
+    },
+    "ResponsibilitySchoolReference":
+    {
+        "EducationalOrgIdentity":
+        {
+            "StateOrganizationId":{"_value":"someResponsibilitySchoolReference"}
+        }
+    },
+    "AssignmentSchoolReference":
+    {
+        "EducationalOrgIdentity":
+        {
+            "StateOrganizationId":{"_value":"someAssignmentSchoolReference"}
+        }
+    },
+    "DisciplineIncidentReference":
+    [
+        {
+            "DisciplineIncidentIdentity":
+            {
+                "EducationalOrgReference":
+                {
+                    "EducationalOrgIdentity":
+                    {
+                        "StateOrganizationId":{"_value":"testSchoolId"}
+                    }
+               },
+               "IncidentIdentifier":{"_value":"theIncident"}
+            }
+        }
+    ],
+    "StaffReference":
+    {
+        "StaffIdentity":
+        {
+            "StaffUniqueStateId":{"_value":"jjackson"}
+        }
+    }
+}
+}

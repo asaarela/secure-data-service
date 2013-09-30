@@ -1,0 +1,13 @@
+{
+"recordType":"attendance",
+    "attributes":
+    {
+        "StudentReference":
+        {
+            "StudentIdentity":
+            {
+                "StudentUniqueStateId":{"_value":"100000000"}
+            }
+        }
+    }
+}

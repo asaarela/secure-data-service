@@ -1,0 +1,4 @@
+edfi-xml,Attendance,InterchangeAttendance.xml,ee7abfcaa9ac36549aaa3a8c83949394
+edfi-xml,StaffAssociation,InterchangeStaffAssociation.xml,374ec31460d15e9b08a0eaa29e852c13
+edfi-xml,StudentGrades,InterchangeStudentGrade.xml,efc2e5686eebe8000b7d268f9e53532e
+edfi-xml,StudentCohort,InterchangeStudentCohort.xml,a1bfbfa11192e809a5cbae9c4032329f

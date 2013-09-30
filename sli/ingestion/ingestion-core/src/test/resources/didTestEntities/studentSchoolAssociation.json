@@ -1,0 +1,34 @@
+{
+"recordType":"studentSchoolAssociation",
+"attributes":
+    {
+        "StudentReference":
+        {
+            "StudentIdentity":
+            {
+                "StudentUniqueStateId":{"_value":"100000000"}
+            }
+        },
+        "SchoolReference":
+        {
+            "EducationalOrgIdentity":
+            {
+                "StateOrganizationId":{"_value":"testSchoolId"}
+            }
+        },
+        "GraduationPlanReference":
+        {
+            "GraduationPlanIdentity":
+            {
+                "GraduationPlanType":{"_value":"this graduation plan type"},
+                "EducationalOrgReference":
+                {
+                    "EducationalOrgIdentity":
+                    {
+                        "StateOrganizationId":{"_value":"someEdOrg"}
+                    }
+                }
+            }
+        }
+    }
+}

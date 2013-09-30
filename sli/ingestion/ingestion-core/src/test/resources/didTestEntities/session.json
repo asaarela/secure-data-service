@@ -1,0 +1,28 @@
+{
+"recordType":"session",
+"attributes":
+{
+    "EducationOrganizationReference":
+    {
+        "EducationalOrgIdentity":
+        {
+            "StateOrganizationId":{"_value":"testSchoolId"}
+        }
+    },
+        "GradingPeriodReference":
+        {
+            "GradingPeriodIdentity":
+            {
+                "EducationalOrgReference":
+                {
+                    "EducationalOrgIdentity":
+                    {
+                        "StateOrganizationId":{"_value":"this school"}
+                    }
+                },
+                "GradingPeriod":{"_value":"First Six Weeks"},
+                "BeginDate":{"_value":"2011-09-01"}
+            }
+        }
+    }
+}

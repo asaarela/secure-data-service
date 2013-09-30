@@ -1,0 +1,20 @@
+{
+"recordType":"disciplineIncident",
+"attributes":
+{
+    "StaffReference":
+    {
+        "StaffIdentity":
+        {
+            "StaffUniqueStateId":{"_value":"jjackson"}
+        }
+    },
+    "SchoolReference":
+    {
+        "EducationalOrgIdentity":
+        {
+            "StateOrganizationId":{"_value":"testSchoolId"}
+        }
+    }
+}
+}

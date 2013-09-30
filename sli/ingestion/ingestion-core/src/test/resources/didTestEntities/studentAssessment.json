@@ -1,0 +1,73 @@
+{
+"recordType":"studentAssessment",
+"attributes":
+{
+    "AssessmentReference":
+    {
+        "AssessmentIdentity":
+        {
+            "AssessmentTitle":{"_value":"Fraction Homework 123"},
+            "GradeLevelAssessed":{"_value":"Fifth grade"},
+            "Version":{"_value":1}
+        }
+    },
+    "StudentReference":
+    {
+        "StudentIdentity":
+        {
+            "StudentUniqueStateId":{"_value":"100000000"}
+        }
+    },
+    "studentAssessmentItems":
+    [
+    	{
+    		"assessmentItem":
+			{
+				"LearningStandardReference":
+				[
+    				{
+        				"LearningStandardIdentity":
+        				{
+            				"IdentificationCode":{"_value":"0123456789"}
+        				}
+    				}
+    			]
+			}
+		}
+	],
+	"StudentObjectiveAssessments" :
+	[
+		{
+			"ObjectiveAssessment" :
+			{
+				"LearningObjectiveReference" :
+				[
+					{
+						"LearningObjectiveIdentity" :
+						{
+							"ObjectiveGradeLevel":{"_value":"Twelfth grade"},
+							"Objective":{"_value":"Writing: Informational Text"},
+							"AcademicSubject":{"_value":"ELA"}
+						}
+					}
+				],
+				"objectiveAssessments" :
+				[
+					{	"LearningObjectiveReference" :
+						[
+							{
+								"LearningObjectiveIdentity" :
+								{
+									"ObjectiveGradeLevel":{"_value":"Twelfth grade"},
+									"Objective":{"_value":"Writing: Informational Text"},
+									"AcademicSubject":{"_value":"ELA"}
+								}
+							}
+						]
+					}
+				]
+			}
+		}
+	]
+}
+}

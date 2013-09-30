@@ -1,0 +1,32 @@
+{
+  "a_id":"ID001",
+  "AssessmentFamilyTitle":{"_value":"HOjhWE6_IG1Anxl5"},
+  "AssessmentFamilyIdentificationCode":[{
+    "a_IdentificationSystem":"School",
+    "a_AssigningOrganizationCode":"WLQ",
+    "ID":{"_value":"Jr"}
+  }],
+  "AssessmentCategory":{"_value":"Mental ability (intelligence) test"},
+  "AcademicSubject":{"_value":"Composite"},
+  "GradeLevelAssessed":{"_value":"Grade 13"},
+  "LowestGradeLevelAssessed":{"_value":"Tenth grade"},
+  "ContentStandard":{"_value":"Advanced Placement"},
+  "Version":{"_value":-1164435820},
+  "RevisionDate":{"_value":"2014-05-09"},
+  "Nomenclature":{"_value":"Kfr87Oas"},
+  "AssessmentPeriods":[{
+    "AssessmentPeriodDescriptorIdentity":{
+      "AssessmentPeriodDescriptorCodeValue":{"_value":"WPhxGcxrV"}
+    }
+  }],
+  "AssessmentFamilyReference":{
+    "AssessmentFamilyIdentity":{
+        "AssessmentFamilyTitle" : {
+            "_value":"Test"
+        },
+        "Version" : {
+            "_value":1
+        }
+    }
+  }
+}

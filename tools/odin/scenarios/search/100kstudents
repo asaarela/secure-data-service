@@ -1,0 +1,24 @@
+STUDENT_COUNT: 100000
+BEGIN_YEAR: 2011
+NUMBER_OF_YEARS: 1
+ASSESSMENTS_PER_GRADE: 0
+COHORTS_PER_SCHOOL: 0
+
+ENTITY_WHITELIST: [
+  "StateEducationAgency",
+  "Course",
+  "LocalEducationAgency",
+  "School",
+  "Session",
+  "GradingPeriod",
+  "CalendarDate",
+  "CourseOffering",
+  "Staff",
+  "StaffEducationOrgAssignmentAssociation",
+  "Teacher",
+  "TeacherSchoolAssociation",
+  "Section",
+  "TeacherSectionAssociation",
+  "Student",
+  "StudentSchoolAssociation",
+  "StudentSectionAssociation"]

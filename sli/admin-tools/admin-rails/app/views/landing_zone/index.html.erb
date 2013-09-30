@@ -1,0 +1,72 @@
+<% @title="Provision Landing Zone" %>
+
+<% if APP_CONFIG['is_sandbox']
+     h1 = "Configure Your Test Data - Select a Source"
+     intro_text = <<-EOS
+        <p>To use your sandbox for application development and testing, you need to add sample data to your sandbox data
+        store. You can choose to preload the Ed-Fi compliant sample data which inBloom provides to you. Alternatively,
+        to add custom, Ed-Fi compliant data, use this page to configure a landing zone, which is an SFTP location for
+        uploading data files. Each time you want to upload data for a new education organization, you must return to
+        this page to configure a new landing zone.</p>
+
+        <p>To configure the landing zone, select one of the following:</p>
+
+        <p>&nbsp;</p>
+     EOS
+     button_text = "Select"
+   else
+     h1 = "Create a Landing Zone for your Data"
+     intro_text = <<-EOS
+        <p>A landing zone is a directory on inBloom's server that stores and processes your organization's data.</p>
+
+        <p>After you have created a landing zone, you will be able to access it using a SFTP client. We will send you an
+        email with information how to upload your data for ingestion into inBloom. Please click Create to continue. </p>
+     EOS
+     button_text = "Create"
+   end
+%>
+
+<div class="provision">
+  <div class="page-header">
+    <h1><%= h1 %></h1>
+  </div>
+
+  <%=  intro_text.html_safe %>
+
+  <%= form_tag(url_for(:controller => 'landing_zone', :action => 'provision')) %>
+  <% if APP_CONFIG['is_sandbox'] %>
+      <div class="provisionBlock">
+        <%= radio_button_tag 'ed_org', "from_sample", false, :class => "radioButton" %>
+        <label for="ed_org_from_sample">Autoload inBloom sample data</label>
+        <div class="sample_data_select">
+          <%= select_tag "sample_data_select", options_for_select(@sample_data) %>
+        </div>
+      </div>
+      <p></p>
+      <div class="provisionBlock">
+        <input id="custom" name="ed_org" type="radio" value="custom" class="radioButton"/>
+        <label for="custom" rel="tooltip" title="Enter the name of the State Organization Id of your sample State Education Agency (SEA)">
+          I will upload my own data <i id="tooltip" class="icon-question-sign"></i>
+        </label>
+        <div class="edOrgIdSelect">
+          <%= text_field_tag "custom_ed_org", nil, :placeholder => "custom_edorg", :maxlength => 60%>
+          <label for="custom_ed_org">State organization Id of Ed Org</label>
+        </div>
+      </div>
+      <p>After you configure your landing zone, you will receive an email with further instructions on how to upload your data.</p>
+  <% end %>
+
+  <div class="form-actions">
+    <input name="commit" type="submit" value="<%= button_text %>" id="provisionButton" class="btn btn-info"/>
+    <span id="spinner" class="spinner" style="display:none"><img src="/assets/spinner.gif"></span>
+  </div>
+  </form>
+</div>
+<script type="text/javascript">
+    var is_sandbox = <%= APP_CONFIG['is_sandbox'] %>
+            $("#key_tooltip").tooltip();
+    <% if APP_CONFIG['is_sandbox'] %>
+    $("#tooltip").tooltip();
+    <% end %>
+</script>
+

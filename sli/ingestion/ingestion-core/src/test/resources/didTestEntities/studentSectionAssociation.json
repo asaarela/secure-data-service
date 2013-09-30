@@ -1,0 +1,27 @@
+{
+    "recordType":"studentSectionAssociation",
+    "attributes":
+    {
+        "StudentReference":
+        {
+            "StudentIdentity":
+            {
+                "StudentUniqueStateId":{"_value":"100000000"}
+            }
+        },
+        "SectionReference":
+        {
+            "SectionIdentity":
+            {
+                "EducationalOrgReference":
+                {
+                    "EducationalOrgIdentity":
+                    {
+                        "StateOrganizationId":{"_value":"this school"}
+                    }
+                },
+                "UniqueSectionCode":{"_value":"this section"}
+            }
+        }
+    }
+}

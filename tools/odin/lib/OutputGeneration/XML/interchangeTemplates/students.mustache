@@ -1,0 +1,157 @@
+{{!
+Copyright 2012-2013 inBloom, Inc. and its affiliates.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+}}
+{{#entity}}
+<Student>
+  <StudentUniqueStateId>{{id}}</StudentUniqueStateId>
+    {{#studentIdentificationCode}}
+      <StudentIdentificationCode IdentificationSystem="{{identificationSystem}}" AssigningOrganizationCode="{{assigningOrganizationCode}}">
+        <IdentificationCode>{{identificationCode}}</IdentificationCode>
+      </StudentIdentificationCode>
+    {{/studentIdentificationCode}}
+  <Name>
+    {{#prefix}}
+    <PersonalTitlePrefix>{{prefix}}</PersonalTitlePrefix>
+    {{/prefix}}
+    <FirstName>{{firstName}}</FirstName>
+    {{#middleName}}
+    <MiddleName>{{middleName}}</MiddleName>
+    {{/middleName}}
+    <LastSurname>{{lastName}}</LastSurname>
+    {{#suffix}}
+    <GenerationCodeSuffix>{{suffix}}</GenerationCodeSuffix>
+    {{/suffix}}
+  </Name>
+  {{#otherName}}
+  <OtherName OtherNameType="{{otherNameType}}">
+    {{#prefix}}
+    <PersonalTitlePrefix>{{prefix}}</PersonalTitlePrefix>
+    {{/prefix}}
+    <FirstName>{{firstName}}</FirstName>
+    {{#middleName}}
+    <MiddleName>{{middleName}}</MiddleName>
+    {{/middleName}}
+    <LastSurname>{{lastName}}</LastSurname>
+    {{#suffix}}
+    <GenerationCodeSuffix>{{suffix}}</GenerationCodeSuffix>
+    {{/suffix}}
+  </OtherName>
+  {{/otherName}}
+  <Sex>{{sex}}</Sex>
+  <BirthData>
+    <BirthDate>{{birthDay}}</BirthDate>
+  </BirthData>
+  <Address AddressType="Home">
+    <StreetNumberName>{{address}}</StreetNumberName>
+    <City>{{city}}</City>
+    <StateAbbreviation>{{state}}</StateAbbreviation>
+    <PostalCode>{{postalCode}}</PostalCode>
+  </Address>
+  {{#telephone}}
+	<Telephone>
+	  <TelephoneNumber>{{telephone}}</TelephoneNumber>
+	</Telephone>
+  {{/telephone}}
+  <ElectronicMail EmailAddressType="Home/Personal">
+    <EmailAddress>{{email}}</EmailAddress>
+  </ElectronicMail>
+  {{#profileThumbnail}}
+    <ProfileThumbnail>{{profileThumbnail}}</ProfileThumbnail>
+  {{/profileThumbnail}}
+  <HispanicLatinoEthnicity>{{hispanicLatino}}</HispanicLatinoEthnicity>
+  {{#oldEthnicity}}
+    <OldEthnicity>{{oldEthnicity}}</OldEthnicity>
+  {{/oldEthnicity}}
+  {{#race}}
+  <Race>
+    <RacialCategory>{{race}}</RacialCategory>
+  </Race>
+  {{/race}}
+  <EconomicDisadvantaged>{{economicDisadvantaged}}</EconomicDisadvantaged>
+  {{#schoolFood}}
+  <SchoolFoodServicesEligibility>{{schoolFood}}</SchoolFoodServicesEligibility>
+  {{/schoolFood}}
+  {{#studentCharacteristics}}
+    <StudentCharacteristics>
+      <Characteristic>{{characteristic}}</Characteristic>
+      <BeginDate>{{beginDate}}</BeginDate>
+      <EndDate>{{endDate}}</EndDate>
+      <DesignatedBy>{{designatedBy}}</DesignatedBy>
+    </StudentCharacteristics>
+  {{/studentCharacteristics}}  
+  {{#limitedEnglish}}
+  <LimitedEnglishProficiency>{{limitedEnglish}}</LimitedEnglishProficiency>
+  {{/limitedEnglish}}
+  {{#languages}}
+    <Languages>
+      <Language>{{languages}}</Language>
+    </Languages>
+  {{/languages}}
+  {{#homeLanguages}}
+    <HomeLanguages>
+      <Language>{{homeLanguages}}</Language>
+    </HomeLanguages>
+  {{/homeLanguages}}
+  {{#disabilities}}
+    <Disabilities>
+      <Disability>{{disability}}</Disability>
+      <DisabilityDiagnosis>{{disabilityDiagnosis}}</DisabilityDiagnosis>
+      <OrderOfDisability>{{orderOfDisability}}</OrderOfDisability>
+    </Disabilities>
+  {{/disabilities}}
+  {{#section504Disabilities}}
+    <Section504Disabilities>
+      <Section504Disability>{{section504Disabilities}}</Section504Disability>
+    </Section504Disabilities>
+  {{/section504Disabilities}}
+  {{#displacementStatus}}
+    <DisplacementStatus>{{displacementStatus}}</DisplacementStatus>
+  {{/displacementStatus}}
+  {{#programParticipations}}
+    <ProgramParticipations>
+      <Program>{{program}}</Program>
+      <BeginDate>{{beginDate}}</BeginDate>
+      <EndDate>{{endDate}}</EndDate>
+      <DesignatedBy>{{designatedBy}}</DesignatedBy>
+    </ProgramParticipations>
+  {{/programParticipations}}
+  {{#learningStyles}}
+    <LearningStyles>
+      <VisualLearning>{{visualLearning}}</VisualLearning>
+      <AuditoryLearning>{{auditoryLearning}}</AuditoryLearning>
+      <TactileLearning>{{tactileLearning}}</TactileLearning>
+    </LearningStyles>
+  {{/learningStyles}}
+  {{#cohortYears}}
+    <CohortYears CohortYearType="{{cohortYearType}}">
+      <SchoolYear>{{schoolYear}}</SchoolYear>
+    </CohortYears>
+  {{/cohortYears}}
+  {{#studentIndicators}}
+    <StudentIndicators>
+      <IndicatorGroup>{{indicatorGroup}}</IndicatorGroup>
+      <IndicatorName>{{indicatorName}}</IndicatorName>
+      <Indicator>{{indicator}}</Indicator>
+      <BeginDate>{{beginDate}}</BeginDate>
+      <EndDate>{{endDate}}</EndDate>
+      <DesignatedBy>{{designatedBy}}</DesignatedBy>
+    </StudentIndicators>
+  {{/studentIndicators}}  
+  {{#loginId}}
+  <LoginId>{{loginId}}</LoginId>
+  {{/loginId}}
+</Student>
+{{/entity}}
+

@@ -1,0 +1,202 @@
+# Base set of configuration parameters required to run ODIN
+STUDENT_COUNT: 1
+BEGIN_YEAR: 2013
+NUMBER_OF_YEARS: 3
+
+# Select the output of the ODIN tool
+# currently supported values: 'xml'
+# not yet implemented values: 'api' [will require hostname variable as well]
+DATA_OUTPUT: xml
+DIRECTORY: generated/
+
+# Minimum and Maximum grade breakdown percentages
+MINIMUM_GRADE_PERCENTAGE: 6.5
+MAXIMUM_GRADE_PERCENTAGE: 8.5
+
+# Average number of students per school type:
+# -> resouce: http://nces.ed.gov/pubs2002/overview/table5.asp
+AVERAGE_ELEMENTARY_SCHOOL_NUM_STUDENTS: 500
+AVERAGE_MIDDLE_SCHOOL_NUM_STUDENTS: 750
+AVERAGE_HIGH_SCHOOL_NUM_STUDENTS: 1000
+AVERAGE_NUM_STUDENTS_THRESHOLD: 0.50
+
+# Average number of programs available per education organization type
+AVERAGE_NUM_PROGRAMS: {'seas': 4, 'leas': 8, 'elementary': 12, 'middle': 16, 'high': 20}
+AVERAGE_NUM_PROGRAMS_THRESHOLD: 0.25
+MINIMUM_NUM_PROGRAMS_PER_STAFF_MEMBER: 2
+MAXIMUM_NUM_PROGRAMS_PER_STAFF_MEMBER: 6
+MINIMUM_NUM_PROGRAMS_PER_TEACHER: 1
+MAXIMUM_NUM_PROGRAMS_PER_TEACHER: 3
+
+# Average number of schools per school district
+# -> resource: http://nces.ed.gov/pubs2009/2009320.pdf (Table 1, page 7)
+AVERAGE_NUM_SCHOOLS_PER_DISTRICT: 5
+AVERAGE_SCHOOLS_THRESHOLD: 0.60
+
+# Number of students per section for each school type
+STUDENTS_PER_SECTION: {'elementary': 21, 'middle': 24, 'high': 28}
+
+# Set the number of records we cache before writing them to disk.
+BATCH_SIZE: 2500
+
+# Course Catalog (currently published at State Education Agency level)
+# should be translated into course.json (similar to staff catalog)
+SIXTH_GRADE_COURSES: [ "Mathematics", "Science" , "English", "History" ]
+SEVENTH_GRADE_COURSES: [ "Mathematics", "Science" , "English", "History" ]
+EIGHTH_GRADE_COURSES: [ "Mathematics", "Science" , "English", "History" ]
+NINTH_GRADE_COURSES: [ "Mathematics", "Science" , "English", "History" ]
+TENTH_GRADE_COURSES: [ "Mathematics", "Science" , "English", "History" ]
+ELEVENTH_GRADE_COURSES: [ "Mathematics", "Science" , "English", "History" ]
+TWELFTH_GRADE_COURSES: [ "Mathematics", "Science" , "English", "History" ]
+
+COURSES_ON_SEA: true
+
+# Number of teachers to generate for each section
+TEACHERS_PER_SECTION: 1
+
+# Staff Catalog location
+STAFF_CATALOG: scenarios/staff.json
+
+# Teacher to Section mapping
+MAX_SECTIONS_PER_TEACHER: {'elementary': 1, 'middle': 3, 'high': 5}
+TEACHERS_PER_SECTION: 1
+
+# Assessment information
+ASSESSMENTS_TAKEN: {GRADE_WIDE_ASSESSMENTS: 3}
+ASSESSMENTS_PER_GRADE: 2
+ASSESSMENT_ITEMS_PER_ASSESSMENT: {GRADE_WIDE_ASSESSMENTS: 4}
+OBJECTIVE_ASSESSMENTS_PER_ASSESSMENT: 2
+CHILD_OBJECTIVE_ASSESSMENTS: true
+ASSESSMENT_ITEMS_IN_OBJECTIVE_ASSESSMENT: false
+
+# Attendance information
+EXCEPTION_ONLY_ATTENDANCE: true
+WRITE_SECTION_ATTENDANCE: false
+DAILY_ATTENDANCE_PERCENTAGES: {
+  "elementary": {"absent": 4, "tardy": 1},
+  "middle": {"absent": 6, "tardy": 2},
+  "high": {"absent": 8, "tardy": 3}
+}
+
+# Gradebook Entry information
+GRADEBOOK_ENTRIES_BY_GRADE: {
+  "Kindergarten": {
+    "Homework": {"min": 2, "max": 4}
+  },
+  "First grade": {
+    "Homework": {"min": 4, "max": 8}
+  },
+  "Second grade": {
+    "Homework": {"min": 4, "max": 8, "weight": 90},
+    "Quiz": {"min": 1, "max": 2, "weight": 10}
+  },
+  "Third grade": {
+    "Homework": {"min": 4, "max": 8, "weight": 90},
+    "Quiz": {"min": 1, "max": 2, "weight": 10}
+  },
+  "Fourth grade": {
+    "Homework": {"min": 4, "max": 8, "weight": 90},
+    "Quiz": {"min": 1, "max": 2, "weight": 10}
+  },
+  "Fifth grade": {
+    "Homework": {"min": 4, "max": 8, "weight": 90},
+    "Quiz": {"min": 1, "max": 2, "weight": 10}
+  },
+  "Sixth grade": {
+    "Homework": {"min": 8, "max": 16, "weight": 80},
+    "Quiz": {"min": 3, "max": 6, "weight": 20}
+  },
+  "Seventh grade": {
+    "Homework": {"min": 8, "max": 16, "weight": 80},
+    "Quiz": {"min": 3, "max": 6, "weight": 20}
+  },
+  "Eighth grade": {
+    "Homework": {"min": 8, "max": 16, "weight": 80},
+    "Quiz": {"min": 3, "max": 6, "weight": 20}
+  },
+  "Ninth grade": {
+    "Homework": {"min": 12, "max": 24, "weight": 75},
+    "Quiz": {"min": 4, "max": 8, "weight": 25}
+  },
+  "Tenth grade": {
+    "Homework": {"min": 12, "max": 24, "weight": 75},
+    "Quiz": {"min": 4, "max": 8, "weight": 25}
+  },
+  "Eleventh grade": {
+    "Homework": {"min": 12, "max": 24, "weight": 75},
+    "Quiz": {"min": 4, "max": 8, "weight": 25}
+  },
+  "Twelfth grade": {
+    "Homework": {"min": 12, "max": 24, "weight": 75},
+    "Quiz": {"min": 4, "max": 8, "weight": 25}
+  }
+}
+
+#Graduation plans
+GRADUATION_PLANS: {
+  "Distinguished": {"English Language and Literature": 12, "Mathematics": 15, "Science": 15, "Social Sciences and History": 12}, 
+  "Minimum": {"English Language and Literature": 9, "Mathematics": 9, "Science": 9, "Social Sciences and History": 9}, 
+  "Standard": {"English Language and Literature": 12, "Mathematics": 12, "Science": 12, "Social Sciences and History": 12}
+}
+
+#cohorts
+COHORTS_PER_SCHOOL: 3
+DAYS_IN_COHORT: 90
+PROBABILITY_STUDENT_IN_COHORT: .3
+STAFF_HAVE_COHORT_ACCESS: true
+STAFF_COHORT_ASSOCIATION_PER_STAFF: 1
+
+#parents
+INCLUDE_PARENTS: true
+PARENTS_PER_STUDENT: 2
+
+#discipline
+INCIDENTS_PER_SECTION: 2
+LIKELYHOOD_STUDENT_WAS_INVOLVED: .5
+BEHAVIORS: [
+  { short: "Fighting", desc: "Fighting with another student", category: "School Violation" },
+  { short: "Disruption", desc: "Disrupting class", category: "School Code of Conduct" },
+  { short: "Tardiness", desc: "Being late for class", category: "School Violation" }]
+DISCIPLINE_OPTIONS: [
+  { short: "Suspension", desc: "Student is suspended from school" },
+  { short: "Detention", desc: "Student is given detention" },
+  { short: "Warning", desc: "Student is given a verbal warning" }]
+
+#learning objectives
+NUM_LEARNING_OBJECTIVES_PER_SUBJECT_AND_GRADE: 5
+
+NUM_LEARNING_STANDARDS_PER_SUBJECT_AND_GRADE: 10
+
+COMPETENCY_LEVEL_DESCRIPTORS: [
+  { code_value: "Incompetent", description: "Student does not understand anything", performance_base_conversion: "Well Below Basic" },
+  { code_value: "Barely Competent", description: "Student understands some basic", performance_base_conversion: "Basic" },
+  { code_value: "Competent", description: "Student understands basic and some intermediate material", performance_base_conversion: "Proficient" },
+  { code_value: "Very Competent", description: "Student understands everything in subject", performance_base_conversion: "Advanced" }]
+
+ENTITY_BLACKLIST: [
+"BehaviorDescriptor",
+"DisciplineDescriptor",
+"BellSchedule"]
+
+#likelyhood for random optional fields most people don't care about
+OPTIONAL_FIELD_LIKELYHOOD: 0.0
+
+# Settings specifically for matching cardinalities with the old Java tool, probably of
+# little use outside of that
+# Do not create StaffEdOrgAssociations except for SEA staff
+#HACK_NO_STAFF_EDORG_ASSOCIATIONS_EXCEPT_SEA: false
+# Change the number of StaffProgramAssociations created for teacher
+#HACK_STAFF_PROGRAM_ASSOCIATIONS_FOR_TEACHER: 1
+#HACK_SECTIONS_PER_STUDENT: 1
+# Limit the number of staff roles in an LEA to less than the default
+#HACK_MAX_LEA_ROLES: 999
+# Limit the number of staff roles in an SEA to less than the default
+#HACK_MAX_SCHOOL_ROLES: 999
+# Allow an LEA to have multiple sessions
+#HACK_SESSIONS_PER_LEA: 1
+# Only create CalendarDates for one session -- now entirely sure if this is a hack or if this is actually the correct behavior
+#HACK_ONLY_CALENDAR_DATES_FOR_ONE_SESSION: false
+#  Only create StaffEdOrgAssociations for SEA staff
+#HACK_NO_STAFF_EDORG_ASSOCIATIONS_EXCEPT_SEA: false
+# Only create CalendarDates for a percentage of the dates
+#HACK_PERCENTAGE_CALENDAR_DATES: 1

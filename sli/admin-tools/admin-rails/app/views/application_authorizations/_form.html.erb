@@ -1,0 +1,29 @@
+    <tr>
+      <td><%= @apps_map[@app_auth.appId].name %><% if @apps_map[@app_auth.appId].registration.status != 'APPROVED' %>
+          <div class="alert">Application has been denied by operator</div>
+        <% end %><% if @apps_map[@app_auth.appId].isBulkExtract %>
+          <div class="alert alert-info">Bulk Extract application request</div>
+        <% end %>
+      </td>
+      <td><%= @apps_map[@app_auth.appId].version  %></td>
+      <td><%= @apps_map[@app_auth.appId].vendor %></td>
+      <%=
+          isApproved = @app_auth.authorized
+          if isApproved
+            content_tag(:td, "Approved", :id => "approvedStatus")
+          else
+            content_tag(:td, "Not Approved", :id => "notApprovedStatus")
+          end
+      %>
+      <td><%=
+          form_for @app_auth do |f|
+          %>
+            <%= f.hidden_field :appId, :value => @app_auth.appId %>
+            <%= f.hidden_field :edorg, :value => @cur_edorg %>
+            <%= f.submit "Approve", :disabled => isApproved,
+                         :confirm => "Do you really want this application to access the district's data?'", :class=>"btn" %>
+            <%= f.submit "Deny", :disabled => !isApproved,
+                :confirm => "Do you really want to deny the district's data to this application?", :class=> "btn btn-danger"%>
+          <% end %>
+      </td>
+    </tr>

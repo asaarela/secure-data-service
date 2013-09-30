@@ -1,0 +1,27 @@
+{
+"recordType":"studentDisciplineIncidentAssociation",
+"attributes":
+{
+    "StudentReference":
+    {
+        "StudentIdentity":
+        {
+            "StudentUniqueStateId":{"_value":"100000000"}
+        }
+    },
+    "DisciplineIncidentReference":
+    {
+        "DisciplineIncidentIdentity":
+        {
+            "EducationalOrgReference":
+            {
+                "EducationalOrgIdentity":
+                {
+                    "StateOrganizationId":{"_value":"testSchoolId"}
+                }
+           },
+           "IncidentIdentifier":{"_value":"theIncident"}
+        }
+    }
+}
+}

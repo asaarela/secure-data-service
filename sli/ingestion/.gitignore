@@ -1,0 +1,10 @@
+.settings
+.project
+.checkstyle
+.classpath
+target
+.git
+.pydevproject
+ingestion-service/src/main/resources/ingestion_batch_job_indexes.js
+ingestion-service/src/main/resources/sli_indexes.js
+ingestion-service/src/main/resources/tenantDB_indexes.txt

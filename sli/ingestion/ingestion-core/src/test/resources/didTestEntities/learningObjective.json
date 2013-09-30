@@ -1,0 +1,13 @@
+{
+"recordType":"learningObjective",
+"attributes":
+{
+    "LearningStandardReference":
+    {
+        "LearningStandardIdentity":
+        {
+            "IdentificationCode":{"_value":"0123456789"}
+        }
+    }
+}
+}

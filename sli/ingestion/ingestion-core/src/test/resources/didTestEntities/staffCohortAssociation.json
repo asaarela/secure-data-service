@@ -1,0 +1,27 @@
+{
+"recordType":"staffCohortAssociation",
+"attributes":
+{
+	"StaffReference":
+	{
+		"StaffIdentity":
+		{
+			"StaffUniqueStateId":{"_value":"jjackson"}
+		}
+	},
+	"CohortReference":
+	{
+		"CohortIdentity":
+		{
+			"CohortIdentifier":{"_value":"ACC-TEST-COH-1"},
+			"EducationalOrgReference":
+			{
+				"EducationalOrgIdentity":
+				{
+					"StateOrganizationId":{"_value":"STANDARD-SEA"}
+				}
+			}
+		}
+	}
+}
+}

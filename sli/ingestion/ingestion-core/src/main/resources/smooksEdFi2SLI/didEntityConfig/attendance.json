@@ -1,0 +1,16 @@
+{
+    "referenceSources" :
+        [
+            {
+              "entityType" : "educationOrganization",
+              "optional" : false,
+              "sourceRefPath": "body.SchoolReference"
+            },
+            {
+              "entityType" : "student",
+              "optional" : false,
+              "sourceRefPath": "body.StudentReference"
+            }
+
+        ]
+}

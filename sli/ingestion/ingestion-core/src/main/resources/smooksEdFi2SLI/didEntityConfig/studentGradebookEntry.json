@@ -1,0 +1,24 @@
+{
+    "referenceSources" :
+    [   {
+            "entityType" : "student",
+            "sourceRefPath": "body.StudentSectionAssociationReference.StudentSectionAssociationIdentity.StudentReference",
+            "optional" : false
+        },
+        {
+            "entityType" : "section",
+            "sourceRefPath": "body.StudentSectionAssociationReference.StudentSectionAssociationIdentity.SectionReference",
+            "optional" : false
+        },
+        {
+            "entityType" : "gradebookEntry",
+            "sourceRefPath": "body.GradebookEntryReference",
+            "optional" : false
+        },
+        {
+            "entityType" : "studentSectionAssociation",
+            "sourceRefPath": "body.StudentSectionAssociationReference",
+            "optional" : false
+        }
+    ]
+}

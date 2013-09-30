@@ -1,0 +1,23 @@
+{
+    "referenceSources" :
+    [
+        {
+            "entityType" : "learningObjective",
+            "sourceRefPath": "body.StudentObjectiveAssessments.ObjectiveAssessment.LearningObjectiveReference",
+            "optional" : true
+        },
+        {
+            "entityType" : "learningObjective",
+            "sourceRefPath": "body.StudentObjectiveAssessments.ObjectiveAssessment.objectiveAssessments.LearningObjectiveReference",
+            "optional" : true
+        },
+        {
+            "entityType" : "student",
+            "sourceRefPath": "body.StudentReference"
+        },
+        {
+            "entityType" : "assessment",
+            "sourceRefPath": "body.AssessmentReference"
+        }
+    ]
+}

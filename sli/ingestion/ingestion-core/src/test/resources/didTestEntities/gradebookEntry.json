@@ -1,0 +1,41 @@
+{
+"recordType":"gradebookEntry",
+"attributes":
+{
+    "LearningStandardReference":
+    {
+        "LearningStandardIdentity":
+        {
+            "IdentificationCode":{"_value":"0123456789"}
+        }
+    },
+    "SectionReference":
+    {
+        "SectionIdentity":
+        {
+            "EducationalOrgReference":
+            {
+                "EducationalOrgIdentity":
+                {
+                    "StateOrganizationId":{"_value":"this school"}
+                }
+            },
+            "UniqueSectionCode":{"_value":"this section"}
+        }
+    },
+        "GradingPeriodReference":
+        {
+            "GradingPeriodIdentity":
+            {
+                "EducationalOrgReference":
+                {
+                    "EducationalOrgIdentity":
+                    {
+                        "StateOrganizationId":{"_value":"this school"}
+                    }
+                },
+                "GradingPeriod":{"_value":"First Six Weeks"},
+                "BeginDate":{"_value":"2011-09-01"}
+            }
+        }}
+}

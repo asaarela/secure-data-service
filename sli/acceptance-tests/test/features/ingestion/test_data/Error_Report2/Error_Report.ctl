@@ -1,0 +1,4 @@
+edfi-xml,StudentParent,InterchangeStudent.xml,b07d5df8280adeb1bfbdffbce1effd06
+edfi-xml,EducationOrganization,InterchangeEducationOrganization.xml,fe869b0f0e8824b5a4796a8930d1a3a0
+edfi-xml,StudentEnrollment,InterchangeStudentEnrollment.xml,07dfe88eb2002b97ab0c6c91b3efc292
+edfi-xml,Attendance,StudentAttendanceEvents.xml,c8beefe494e8d190db23ee563f75162b

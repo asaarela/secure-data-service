@@ -1,0 +1,64 @@
+{
+    "entities":{
+        "staff": {
+            "5": [
+            {
+                "ADD": {
+                    "fieldName": "favoriteSubject",
+                    "defaultValue": "Math"
+                }            
+            },
+            {
+                "REMOVE": {
+                    "fieldName": "sex"
+                }
+            },
+            {
+                "RENAME": {
+                    "oldFieldName": "name",
+                    "newFieldName": "nameData"
+                }
+            }]
+        },
+        "teacher": {
+            "5": [
+            {
+                "ADD": {
+                    "fieldName": "favoriteSubject",
+                    "defaultValue": "Math"
+                }            
+            },
+            {
+                "REMOVE": {
+                    "fieldName": "sex"
+                }
+            },
+            {
+                "RENAME": {
+                    "oldFieldName": "name",
+                    "newFieldName": "nameData"
+                }
+            }]
+        },
+        "student": {
+          "3": [{
+            "ADD": {
+              "fieldName": "favoriteColor",
+              "defaultValue": "yellow"
+            }
+          }],
+          "4": [{
+            "ADD": {
+              "fieldName": "mascot",
+              "defaultValue": "pirates"
+            }
+          }],
+          "5": [{
+            "ADD": {
+              "fieldName": "somefield",
+              "defaultValue": "somevalue"
+            }
+          }]
+        }
+    }
+}

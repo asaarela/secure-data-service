@@ -1,0 +1,62 @@
+{{! 
+Copyright 2012-2013 inBloom, Inc. and its affiliates.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+}}
+{{#entity}}
+  <DisciplineIncident>
+    <IncidentIdentifier>{{incident_identifier}}</IncidentIdentifier>
+    <IncidentDate>{{date}}</IncidentDate>
+    <IncidentTime>{{time}}</IncidentTime>
+    <IncidentLocation>{{location}}</IncidentLocation>
+    {{#reporter_desc}}
+    <ReporterDescription>{{reporter_desc}}</ReporterDescription>
+    {{/reporter_desc}}
+    {{#reporter_name}}
+    <ReporterName>{{reporter_name}}</ReporterName>
+    {{/reporter_name}}
+    {{#behaviors}}
+    <Behaviors>
+      <CodeValue>{{.}}</CodeValue>
+    </Behaviors>
+    {{/behaviors}}
+    {{#sec_behaviors}}
+    <SecondaryBehaviors BehaviorCategory="{{type}}">
+      <SecondaryBehavior>{{sec_behavior}}</SecondaryBehavior>
+    </SecondaryBehaviors>
+    {{/sec_behaviors}}
+    {{#weapons}}
+    <Weapons>
+      <Weapon>{{.}}</Weapon>
+    </Weapons>
+    {{/weapons}}
+    {{#reported}}
+    <ReportedToLawEnforcement>{{reported}}</ReportedToLawEnforcement>
+    {{/reported}}
+    {{#case_number}}
+    <CaseNumber>{{case_number}}</CaseNumber>
+    {{/case_number}}
+    <SchoolReference>
+      <EducationalOrgIdentity>
+        <StateOrganizationId>{{school_id}}</StateOrganizationId>
+      </EducationalOrgIdentity>
+    </SchoolReference>
+    {{#staff_id}}
+    <StaffReference>
+      <StaffIdentity>
+        <StaffUniqueStateId>{{staff_id}}</StaffUniqueStateId>
+      </StaffIdentity>
+    </StaffReference>
+    {{/staff_id}}
+  </DisciplineIncident>
+{{/entity}}
